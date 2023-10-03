@@ -52,6 +52,9 @@ def check_board(board):
     elif board[2] == board[4] == board[6] and board[2] != "-":
         winner = board[2]
         game_Running = False
+    elif "-" not in board:
+        game_Running = False
+        print("Tie Game!")
     else:
         print("Next player's turn.")
 #switch player
@@ -68,3 +71,4 @@ while game_Running:
     player_input(board)
     check_board(board)
     switch_player()
+print("Thanks for playing!")
